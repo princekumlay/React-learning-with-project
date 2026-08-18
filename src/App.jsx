@@ -5,6 +5,7 @@ import Fruits from './components/Fruits'
 // import Fruit from './components/Fruit'
 // import Fruits from './components/Fruits.jsx'
 import SetFactor from './components/SetFactor.jsx'
+import Form from './components/Form.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -45,6 +46,7 @@ function App() {
         <SetFactor factor={factor} setFactor={setFactor} />
         <Fruits click={count} />
         <Hello />
+        <Form/>
       </section>
     </>
   )
