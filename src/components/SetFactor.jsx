@@ -11,7 +11,7 @@ function SetFactor({ factor, setFactor }) {
   }
 
   return (
-    <div>
+    <div id="buttons">
       <button
         type="button"
         className="counter"

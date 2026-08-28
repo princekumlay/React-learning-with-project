@@ -24,9 +24,9 @@ function App() {
         <div>
           <h1>Get started</h1>
         </div>
-        <p>Count: {count}</p>
-        <p>Factor: {factor}</p>
-
+        <p id="count-para">{count}</p>
+        
+        <div id="buttons">
         <button
           type="button"
           className="counter"
@@ -42,11 +42,21 @@ function App() {
         >
           Decrease Price
         </button>
+        </div>
+        <p id="factor-para">{factor}</p>
 
         <SetFactor factor={factor} setFactor={setFactor} />
-        <Fruits click={count} />
-        <Hello />
-        <Form/>
+        <div>
+          <Fruits click={count} />
+        </div>
+        <div>
+          <Hello />
+        </div>
+        <div>
+          <Form/>
+        </div>
+        
+        
       </section>
     </>
   )

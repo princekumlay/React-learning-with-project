@@ -24,7 +24,7 @@ function Form() {
     <div id="formContainer">
 
       <form id="form" onSubmit={handleSubmit}>
-
+        <h2>Form</h2>
         <div>
         <label>FirstName: </label>
         <input
