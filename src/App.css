@@ -4,9 +4,9 @@
   border-radius: 5px;
   color: var(--accent);
   background: var(--accent-bg);
-  border: 2px solid transparent;
+  border: 2px solid whitesmoke;
   transition: border-color 0.3s;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
 
   &:hover {
     border-color: var(--accent-border);
@@ -17,7 +17,7 @@
   }
 }
 
-.hero {
+/* .hero {
   position: relative;
 
   .base,
@@ -54,7 +54,7 @@
     transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
       scale(0.8);
   }
-}
+} */
 
 #center {
   display: flex;
@@ -76,7 +76,7 @@
   gap: 5px;
 }
 
-#next-steps {
+/* #next-steps {
   display: flex;
   border-top: 1px solid var(--border);
   text-align: left;
@@ -99,18 +99,18 @@
     flex-direction: column;
     text-align: center;
   }
-}
+} */
 
-#docs {
+/* #docs {
   border-right: 1px solid var(--border);
 
   @media (max-width: 1024px) {
     border-right: none;
     border-bottom: 1px solid var(--border);
   }
-}
+} */
 
-#next-steps ul {
+/* #next-steps ul {
   list-style: none;
   padding: 0;
   display: flex;
@@ -157,7 +157,7 @@
       box-sizing: border-box;
     }
   }
-}
+} */
 
 #spacer {
   height: 88px;
@@ -167,7 +167,7 @@
   }
 }
 
-.ticks {
+/* .ticks {
   position: relative;
   width: 100%;
 
@@ -187,7 +187,7 @@
     right: 0;
     border-right-color: var(--border);
   }
-}
+} */
 
 #fruit_container{
   background-color: rgb(33, 32, 32);
