@@ -1,65 +1,34 @@
-import { useState } from 'react'
-import './App.css'
-import Hello from './components/Hello.jsx'
-import Fruits from './components/Fruits'
-// import Fruit from './components/Fruit'
-// import Fruits from './components/Fruits.jsx'
-import SetFactor from './components/SetFactor.jsx'
-import Form from './components/Form.jsx'
+import { useState } from "react";
+import "./App.css";
+import deleteIcon from "./assets/delete.png";
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [factor, setFactor] = useState(1)
-
-  const incrementPrice = () => {
-    setCount(prevCount => prevCount + factor)
-  }
-  const decrementPrice = () => {
-    setCount(prevCount => prevCount - factor)
-  }
-
   return (
-    <>
-      <section id="center">
-        <div>
-          <h1>Get started</h1>
-        </div>
-        <p id="count-para">{count}</p>
-        
-        <div id="buttons">
-        <button
-          type="button"
-          className="counter"
-          onClick={incrementPrice}
-        >
-          Increase Price
-        </button>
+    <div id="main">
+      <h1>To do List</h1>
 
-        <button
-          type="button"
-          className="counter"
-          onClick={decrementPrice}
-        >
-          Decrease Price
-        </button>
-        </div>
-        <p id="factor-para">{factor}</p>
+      <div id="input_task">
+        <input type="text" value={"add task"} />
+      </div>
 
-        <SetFactor factor={factor} setFactor={setFactor} />
-        <div>
-          <Fruits click={count} />
+      {/* <div id="button_div"> */}
+        <button id="add_task_button" onClick={(e) => setText(e.target.val)}>
+          +
+        </button>
+      {/* </div> */}
+
+      <div id="created_task">
+        <p>{"go to gym"}</p>
+
+        <div id="input-delete">
+          <input type="checkbox" />
+          <button>
+            <img id="delete-icon" src={deleteIcon} alt="delete Icon" />
+          </button>
         </div>
-        <div>
-          <Hello />
-        </div>
-        <div>
-          <Form/>
-        </div>
-        
-        
-      </section>
-    </>
-  )
+      </div>
+    </div>
+  );
 }
 
-export default App
+export default App;
