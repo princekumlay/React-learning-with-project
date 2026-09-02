@@ -1,34 +1,38 @@
-import { useState } from "react";
-import "./App.css";
-import deleteIcon from "./assets/delete.png";
+import React, {useState} from 'react'
+import InputCompo from './components/InputCompo'
+import CreateTaskCompo from './components/CreateTaskCompo'
+import './App.css'
+import ThemeToggle from './components/Themetoggle'
+
 
 function App() {
+
+  const [inputVal, setInputVal] = useState("");
+  const [taskList, setTaskList] = useState([]);
+
+  const writeToInput = (e) => {
+    setInputVal(e.target.value);
+  }
+
+  const addTask = () => {
+    if(inputVal !== ""){
+      setTaskList((prevList) => [...prevList, inputVal]);
+      setInputVal("");
+    }
+  };
+
+  const deleteTask = (index) => {
+    setTaskList(prevList => prevList.filter((_, i) => i !== index));
+  }
+
   return (
     <div id="main">
-      <h1>To do List</h1>
-
-      <div id="input_task">
-        <input type="text" value={"add task"} />
-      </div>
-
-      {/* <div id="button_div"> */}
-        <button id="add_task_button" onClick={(e) => setText(e.target.val)}>
-          +
-        </button>
-      {/* </div> */}
-
-      <div id="created_task">
-        <p>{"go to gym"}</p>
-
-        <div id="input-delete">
-          <input type="checkbox" />
-          <button>
-            <img id="delete-icon" src={deleteIcon} alt="delete Icon" />
-          </button>
-        </div>
-      </div>
+      <h1>To-Do List</h1>
+      <ThemeToggle />
+      <InputCompo inputVal={inputVal} writeToInput={writeToInput} addTask={addTask} />
+      <CreateTaskCompo taskList={taskList} deleteTask={deleteTask} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
